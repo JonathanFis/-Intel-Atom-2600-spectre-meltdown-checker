@@ -1,3 +1,98 @@
+Results for the Intel Atom N2600 (Cedarview):
+==========================
+
+Kernel is Linux 4.9.0-6-amd64 #1 SMP Debian 4.9.88-1+deb9u1 (2018-05-07) x86_64
+CPU is Intel(R) Atom(TM) CPU N2600   @ 1.60GHz
+
+Hardware check
+* Hardware support (CPU microcode) for mitigation techniques
+  * Indirect Branch Restricted Speculation (IBRS)
+    * SPEC_CTRL MSR is available:  NO 
+    * CPU indicates IBRS capability:  NO 
+  * Indirect Branch Prediction Barrier (IBPB)
+    * PRED_CMD MSR is available:  NO 
+    * CPU indicates IBPB capability:  NO 
+  * Single Thread Indirect Branch Predictors (STIBP)
+    * SPEC_CTRL MSR is available:  NO 
+    * CPU indicates STIBP capability:  NO 
+  * Speculative Store Bypass Disable (SSBD)
+    * CPU indicates SSBD capability:  NO 
+  * L1 data cache invalidation
+    * FLUSH_CMD MSR is available:  NO 
+  * Enhanced IBRS (IBRS_ALL)
+    * CPU indicates ARCH_CAPABILITIES MSR availability:  NO 
+    * ARCH_CAPABILITIES MSR advertises IBRS_ALL capability:  NO 
+  * CPU explicitly indicates not being vulnerable to Meltdown (RDCL_NO):  NO 
+  * CPU explicitly indicates not being vulnerable to Variant 4 (SSB_NO):  NO 
+  * Hypervisor indicates host CPU might be vulnerable to RSB underflow (RSBA):  NO 
+  * CPU microcode is known to cause stability problems:  NO  (model 0x36 family 0x6 stepping 0x1 ucode 0x10c cpuid 0x30661)
+  * CPU microcode is the latest known available version:  UNKNOWN  (latest microcode version for your CPU model is unknown)
+* CPU vulnerability to the speculative execution attack variants
+  * Vulnerable to Variant 1:  NO 
+  * Vulnerable to Variant 2:  NO 
+  * Vulnerable to Variant 3:  NO 
+  * Vulnerable to Variant 3a:  NO 
+  * Vulnerable to Variant 4:  NO 
+  * Vulnerable to Variant l1tf:  NO 
+
+CVE-2017-5753 [bounds check bypass] aka 'Spectre Variant 1'
+* Mitigated according to the /sys interface:  YES  (Not affected)
+* Kernel has array_index_mask_nospec:  YES  (1 occurrence(s) found of x86 64 bits array_index_mask_nospec())
+* Kernel has the Red Hat/Ubuntu patch:  NO 
+* Kernel has mask_nospec64 (arm64):  NO 
+> STATUS:  NOT VULNERABLE  (your CPU vendor reported your CPU model as not vulnerable)
+
+CVE-2017-5715 [branch target injection] aka 'Spectre Variant 2'
+* Mitigated according to the /sys interface:  YES  (Not affected)
+* Mitigation 1
+  * Kernel is compiled with IBRS support:  YES 
+    * IBRS enabled and active:  NO 
+  * Kernel is compiled with IBPB support:  YES 
+    * IBPB enabled and active:  NO 
+* Mitigation 2
+  * Kernel has branch predictor hardening (arm):  NO 
+  * Kernel compiled with retpoline option:  YES 
+> STATUS:  NOT VULNERABLE  (your CPU vendor reported your CPU model as not vulnerable)
+
+CVE-2017-5754 [rogue data cache load] aka 'Meltdown' aka 'Variant 3'
+* Mitigated according to the /sys interface:  YES  (Not affected)
+* Kernel supports Page Table Isolation (PTI):  YES 
+  * PTI enabled and active:  YES 
+  * Reduced performance impact of PTI:  NO  (PCID/INVPCID not supported, performance impact of PTI will be significant)
+* Running as a Xen PV DomU:  NO 
+> STATUS:  NOT VULNERABLE  (your CPU vendor reported your CPU model as not vulnerable)
+
+CVE-2018-3640 [rogue system register read] aka 'Variant 3a'
+* CPU microcode mitigates the vulnerability:  NO 
+> STATUS:  NOT VULNERABLE  (your CPU vendor reported your CPU model as not vulnerable)
+
+CVE-2018-3639 [speculative store bypass] aka 'Variant 4'
+* Kernel supports speculation store bypass:  NO 
+> STATUS:  NOT VULNERABLE  (your CPU vendor reported your CPU model as not vulnerable)
+
+CVE-2018-3615/3620/3646 [L1 terminal fault] aka 'Foreshadow & Foreshadow-NG'
+> STATUS:  NOT VULNERABLE  (your CPU vendor reported your CPU model as not vulnerable)
+
+Vendor informatoin about the N2600: https://ark.intel.com/products/58916
+
+Where to find me:
+==========================
+
+Steemit: [@Fiserman](http://steemit.com/@fiserman)
+
+Github: [JonathanFis](https://github.com/JonathanFis)
+
+[Quora Profile](https://www.quora.com/profile/Jonathan-Fiserman)
+
+Interested in purchasing one of my articles? [Check out my Constant-Content catalog.](https://www.constant-content.com/Author/128443-Dotcomwriter-details-0.htm)
+
+[BitcoinMXN](http://bitcoinmxn.com)
+
+[Dotcomwriters](http://dotcomwriters.com)
+
+[SteemES](http://steemes.com)
+
+
 Spectre & Meltdown Checker
 ==========================
 
