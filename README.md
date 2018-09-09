@@ -73,7 +73,7 @@ CVE-2018-3639 [speculative store bypass] aka 'Variant 4'
 CVE-2018-3615/3620/3646 [L1 terminal fault] aka 'Foreshadow & Foreshadow-NG'
 > STATUS:  NOT VULNERABLE  (your CPU vendor reported your CPU model as not vulnerable)
 
-Vendor informatoin about the N2600: https://ark.intel.com/products/58916
+Intel Specs: https://ark.intel.com/products/58916
 
 Where to find me:
 ==========================
